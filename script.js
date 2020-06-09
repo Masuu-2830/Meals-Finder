@@ -1,6 +1,7 @@
 const search = document.getElementById('search'),
   submit = document.getElementById('submit'),
   random = document.getElementById('random'),
+  success = document.getElementById('suc-result'),
   mealsEl = document.getElementById('meals'),
   resultHeading = document.getElementById('result-heading'),
   single_mealEl = document.getElementById('single-meal');
@@ -26,6 +27,7 @@ function searchMeal(e) {
         if (data.meals === null) {
           resultHeading.innerHTML = `<p>There are no search results. Try again!<p>`;
         } else {
+          success.innerHTML = `<h4>Click on the image for more info..</h4>`
           mealsEl.innerHTML = data.meals
             .map(
               meal => `
