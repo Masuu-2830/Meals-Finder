@@ -27,7 +27,7 @@ function searchMeal(e) {
         if (data.meals === null) {
           resultHeading.innerHTML = `<p>There are no search results. Try again!<p>`;
         } else {
-          success.innerHTML = `<h4>Click on the image for more info..</h4>`
+          success.innerHTML = `<h4>Click on the image and scroll to the bottom for more info..</h4>`
           mealsEl.innerHTML = data.meals
             .map(
               meal => `
